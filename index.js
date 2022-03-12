@@ -3,7 +3,7 @@ const express = require('express');
 require("dotenv").config();
 const cors = require('cors');
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const { notesRouter } = require("./api/v1/index");
 const req = require('express/lib/request');
 require('./db');
